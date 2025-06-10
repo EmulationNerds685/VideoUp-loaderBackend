@@ -13,6 +13,6 @@ app.use('/api/videos', videoRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
-    app.listen(5000, () => console.log('Server running on port 5000'));
+    app.listen(process.env.PORT, () => console.log('Server running on port 5000'));
   })
   .catch((err) => console.log(err));
